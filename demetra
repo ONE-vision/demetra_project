@@ -1,0 +1,9 @@
+server {
+    listen 80;
+    server_name my_virtual_machine_IP;
+
+    location / {
+        include uwsgi_params;
+        uwsgi_pass unix:///home/mercury/demetra/demetra.sock;
+    }
+}
