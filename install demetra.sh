@@ -48,3 +48,19 @@ sudo nano /etc/systemd/system/demetra.service
 sudo systemctl start demetra
 sudo systemctl enable demetra
 
+#Конфигурация Nginx для запросов
+sudo nano /etc/nginx/sites-available/demetra
+
+#Создание ссылки для включения серверного блока
+sudo ln -s /etc/nginx/sites-available/demetra /etc/nginx/sites-enabled
+
+#Проверка работоспособности Nginx
+sudo nginx -t
+
+#Перезапуск Nginx
+sudo systemctl restart nginx
+
+#Если ранее проводился тест с открытием порта 5000, в целях безопасности его следует закрыть.
+#sudo ufw delete allow 5000
+#Выдача разрешений Nginx
+sudo ufw allow 'Nginx Full'
