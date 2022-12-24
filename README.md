@@ -6,4 +6,4 @@ The main instruction is "install demetra.sh".
 
 "demetra.ini" is a uWSGI configuration file.
 
-"demetra" (with no extension) a server block configuration file.
+"demetra" (with no extension) is a server block configuration file.
