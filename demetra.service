@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to demetra project
+After=network.target
+
+[Service]
+User=mercury
+Group=www-data
+WorkingDirectory=/home/mercury/demetra
+Environment="PATH=/home/mercury/demetra/demetraenv/bin"
+ExecStart=/home/mercury/demetra/demetraenv/bin/uwsgi --ini demetra.ini
+
+[Install]
+WantedBy=multi-user.target
