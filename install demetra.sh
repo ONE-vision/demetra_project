@@ -1,14 +1,14 @@
 #Установка nginx
-sudo apt install nginx
+sudo apt install -y nginx
 
 #Запуск nginx
 sudo systemctl start nginx
 
 #Установка пакета Python
-sudo apt install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools
+sudo apt install -y python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools
 
 #Установка виртуальной среды
-sudo apt install virtualenv
+sudo apt install -y virtualenv
 
 #Создание директории для виртуальной среды
 mkdir ~/demetra
@@ -21,8 +21,8 @@ python3 -m virtualenv demetra
 source demetraenv/bin/activate
 
 #Установка модуля uwsgi flask
-pip install wheel
-pip install uwsgi flask
+pip install -y wheel
+pip install -y uwsgi flask
 
 #Создание исполняемого приложения
 nano ~/demetra/demetra.py 
